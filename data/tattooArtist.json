@@ -3,6 +3,8 @@
     "name" : "Isabelle",
     "address" : {
         "street" : "Av. Monsenhor Tabosa",
-        "number" : "1520"
+        "number" : "1520",
+        "latitude": "dklfd",
+        "longitude": "kdkldl"
     }
 }
