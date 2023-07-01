@@ -12,6 +12,7 @@ import {
   StyleSheet,
   View,
 } from "react-native";
+import { Pressable } from "react-native";
 import { TouchableOpacity } from "react-native";
 import { Icon } from "react-native-vector-icons";
 import CheckBox from "@react-native-community/checkbox"
@@ -24,7 +25,14 @@ export default function Search({ navigation }) {
   
   return (
     <View style={styles.container}>
-      <Text style={{ fontSize: 30 }}> Buscar </Text>
+      <View style={styles.buttonView}>
+        <Pressable title="Buscar" style={styles.button} onPress={() => navigation.navigate("Home")}>
+          <Text style={styles.buttonText}> Feed </Text>
+        </Pressable>
+        <Pressable title="Buscar" style={styles.button}  >
+          <Text style={styles.buttonText}> Buscar </Text>
+        </Pressable>
+        </View> 
       <View style={styles.caixaDeBusca}>
         <Modal
           style={styles.modal}
@@ -91,8 +99,21 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
   },
+  buttonView:{
+    flex:2,
+    flexDirection: "row"
+  },
+  button: {
+    backgroundColor: "#fff",
+    borderRadius: 10,
+    padding: 5
+  },
+  buttonText: {
+    color: "#000",
+    fontSize: 20
+  },
   caixaDeBusca: {
-    flex: 2,
+    flex: 3,
     flexDirection: "row",
     marginTop: 15,
   },
@@ -110,7 +131,7 @@ const styles = StyleSheet.create({
     alignSelf: "flex-end",
   },
   centeredView: {
-    flex: 3,
+    flex: 4,
     alignItems: "center",
     justifyContent: "flex-end",
   },
