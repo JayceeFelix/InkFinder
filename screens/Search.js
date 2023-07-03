@@ -14,10 +14,9 @@ import {
 } from "react-native";
 import { Pressable } from "react-native";
 import { TouchableOpacity } from "react-native";
-import { Icon } from "react-native-vector-icons";
-import CheckBox from "@react-native-community/checkbox"
 import Checkbox from "expo-checkbox"
 import SearchModal from "../screens/SearchModal";
+import Profile from "./Profile";
 
 export default function Search({ navigation }) {
   const [modalVisible, setModalVisible] = useState(false);
@@ -34,7 +33,18 @@ export default function Search({ navigation }) {
         </Pressable>
         </View> 
       <View style={styles.caixaDeBusca}>
-        <Modal
+        <TextInput style={styles.textinput}></TextInput>
+        <TouchableOpacity onPress={() => setModalVisible(true)}>
+          <Image
+            source={require("../assets/filter.png")}
+            style={styles.icon}
+          ></Image>
+        </TouchableOpacity>
+        
+      </View>
+      <Profile/>
+
+      <Modal
           style={styles.modal}
           animationType="fade"
           transparent={true}
@@ -77,14 +87,8 @@ export default function Search({ navigation }) {
             </View>
           </View>
         </Modal>
-        <TextInput style={styles.textinput}></TextInput>
-        <TouchableOpacity onPress={() => setModalVisible(true)}>
-          <Image
-            source={require("../assets/filter.png")}
-            style={styles.icon}
-          ></Image>
-        </TouchableOpacity>
-      </View>
+
+      
     </View>
   );
 }

@@ -5,6 +5,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import Home from "./screens/Home.js";
 import Search from "./screens/Search.js";
 import FeedGallery from "./screens/FeedGallery.js";
+import Profile from "./screens/Profile.js";
 
 const Stack = createStackNavigator();
 
@@ -15,7 +16,7 @@ function MyStack() {
       <Stack.Screen name="Home" component={Home} />
       <Stack.Screen name="Search" component={Search}/>
       <Stack.Screen name="FeedGallery" component={FeedGallery}/>
-      
+      <Stack.Screen name="Perfil" component={Profile}></Stack.Screen>    
     </Stack.Navigator>
   );
 }
