@@ -10,3 +10,4 @@ mobile app in React Native to find a tattoo artist near your location.
     npm install @react-navigation/stack
     npx expo install react-native-gesture-handler
     npx expo install @react-native-community/checkbox
+    npm install @react-navigation/bottom-tabs
