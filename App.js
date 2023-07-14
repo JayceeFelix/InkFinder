@@ -4,6 +4,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import LoginPage from "./screens/LoginPage.js";
 import Feed from "./screens/Home.js";
 import Search from "./screens/Search.js";
 import FeedGallery from "./screens/FeedGallery.js";
@@ -17,6 +18,7 @@ const Tab = createBottomTabNavigator();
 function MyStack() {
   return (
     <Stack.Navigator>
+      <Stack.Screen name="Login" component={LoginPage} options={{title: " "}}/>
       <Stack.Screen name="Feed" component={Feed} />
       <Stack.Screen name="Search" component={Search} />
       <Stack.Screen name="FeedGallery" component={FeedGallery} />
