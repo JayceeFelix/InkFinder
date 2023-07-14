@@ -1,0 +1,10 @@
+{
+    "id" : 123,
+    "name" : "Isabelle",
+    "address" : {
+        "street" : "Av. Monsenhor Tabosa",
+        "number" : "1520",
+        "latitude": "dklfd",
+        "longitude": "kdkldl"
+    }
+}
