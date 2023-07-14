@@ -14,7 +14,7 @@ import {
 } from "react-native";
 import { Pressable, TouchableOpacity, Dimensions } from "react-native";
 import Checkbox from "expo-checkbox";
-import SearchModal from "../screens/SearchModal";
+import SectionedMultiSelect from 'react-native-sectioned-multi-select';
 import tattooArtist from "../data/tattooArtist";
 
 const windowWidth = Dimensions.get("window").width;

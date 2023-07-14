@@ -1,6 +1,20 @@
 import { Text, TextInput, Image, Pressable, View, StyleSheet } from "react-native";
 import { useState } from "react";
 
+function LogIn({userInput, passwordInput, navigation}){
+    
+    console.log(userInput);
+    console.log(passwordInput);
+    if (userInput == "Cliente" && passwordInput == "clientep"){
+        navigation.navigate("Feed");0
+    } else {
+        return(
+            <Text> Wrong! </Text>
+        )
+    }
+
+}
+
 export default function LoginPage({navigation}) {
     const [userInput, setUserInput] = useState(""); // variable gets information from text box
     const [passwordInput, setPasswordInput] = useState(""); // variable gets information from text box
@@ -26,7 +40,7 @@ export default function LoginPage({navigation}) {
           <Text style={styles.forgotPassword}> Esqueceu sua senha? </Text>
         </Pressable>
         <Pressable style={styles.loginButton}
-        onPress={() => navigation.navigate("Feed")}>
+        onPress={() => {LogIn({userInput, passwordInput, navigation})}}>
             <Text style={styles.loginButtonText}> Login </Text>
         </Pressable>
     </View>
@@ -74,3 +88,5 @@ const styles = StyleSheet.create({
     fontSize: 20
   }
 });
+
+//onPress={() => navigation.navigate("Feed")}>
